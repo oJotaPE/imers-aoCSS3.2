@@ -1,0 +1,254 @@
+/* soft reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: dimgray;
+  background-size: auto 100vh; 
+  font-family: 'Source Code Pro', monospace;
+  height: 100vh;
+  font-size: 13px;
+}
+/*se a tela tiver pelo menos 400px carrega esses estilos*/
+@media (min-width: 350px) {
+  .img-portfolio{
+    height: 150px;
+    width: 220px
+  }
+  .site-title{
+    font-size: 3em;
+  }
+body{
+  font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  .img-portfolio{
+    height: 180px;
+    width: 250px
+  }
+  .site-title{
+    font-size: 3em;
+  }
+  body{
+    font-size: 16px;
+    }
+  }
+  @media (min-width: 900px) {
+    .img-portfolio{
+      height: 200px;
+      width: 270px
+    }
+    .site-title{
+      font-size: 4em;
+    }
+    body{
+      font-size: 18px;
+      }
+    
+    }
+header {
+  height: 40vh;
+  background-color: rgb(109, 110, 119);
+  justify-content: center;
+  align-items: center;
+  padding-top: 3em;
+  }
+
+.menu {
+  background-color: darkred;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+ list-style: none; 
+}
+
+.menu a {
+  
+  display: block;
+  padding: 10px 20px;
+  
+}
+
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+.titulo{
+  transform: scale(0.5) translateY(7vh);
+  opacity: 0;
+  
+  animation: linear .5s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+
+100%{
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  }
+}
+*/
+
+.site-subtitle, 
+.site-title {
+  text-shadow: darkslategray 9px 7px 10px ;
+  color: darkred;
+  text-align: center;
+  }
+
+.site-title {
+  font-family: 'Amita', cursive;
+  line-height: 2.5em ;
+  
+}
+
+.site-subtitle {
+  font-family: 'Playfair Display', serif;
+}
+
+
+.sobre,
+.contato,
+.portifolio{
+  padding: 2em;
+  min-height: 50vh;
+  
+}
+
+@media(min-width: 1200px){
+ .container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  }
+}
+
+.sobre h2,
+.contato h2,
+.portifolio h2{
+  font-family: 'Playfair Display', serif;
+  color: ghostwhite ;
+  padding: 1.5em;
+  text-align: center;
+}
+
+.sobre p{
+  color: rgb(32, 15, 15);
+  text-indent: 1.6em;
+  margin-bottom: 1.2em;
+  text-align: justify;
+}
+
+.sobre a{
+  color: darkred;
+}
+
+.sobre .avatar{
+  float: left;
+  margin-right: 2em;
+}
+
+.sobre .avatar img{
+  border-radius: 50%;
+  height: 350px;
+  width: 350px;
+  box-shadow: black 2px 2px 40px .5px;
+}
+
+.portifolio{
+  min-height: 40vh
+}
+
+.portifolio .grid{
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 270px 270px;
+  justify-content: center;
+  }
+
+.portifolio figure{
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 200px;
+  width: 270px;
+  padding: 1em;
+}
+
+/*
+.img-portfolio:hover{
+  transform: scale(1.2)  rotate(-2deg);
+}
+*/
+
+.flip-card{
+perspective: 700px;
+}
+
+.card{
+  position: relative;  
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  height: 200px;
+  width: 270px;
+}
+
+.flip-card:hover .card{
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+backface-visibility: hidden;
+left: 0;
+position: absolute;
+top: 0;
+}
+
+.card-back{
+  background-color: burlywood;
+  height: 200px;
+  width: 270px;
+ transform: rotateY(180deg);
+}
+
+
+
+.contato{
+  text-align: center;
+}
+
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: darkblue 4px 2px 6px;
+}
+
+.contato:active,
+.contato a{
+  transition: text-shadow 750ms;
+}
+
+
+
